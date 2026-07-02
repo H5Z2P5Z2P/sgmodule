@@ -1,0 +1,8 @@
+#!name=YT Music Injection Test
+#!desc=Test if Surge script interception works for YouTube Music
+
+[Script]
+ytm.test = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/H5Z2P5Z2P/sgmodule/master/Script/Youtube/test.ping.js
+
+[MITM]
+hostname = %APPEND% youtubei.googleapis.com
